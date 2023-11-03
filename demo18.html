@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>demo18</title>
+    <link rel="icon" type="image/x-icon"
+        href="data:image/png;base64,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">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .head_class:hover {
+        background-color: green !important;
+    }
+
+    .open_class:hover {
+        margin-top: 30px !important;
+
+    }
+</style>
+
+<body>
+    <div style="padding: 3%;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <div>
+                        <h2>CyberM5</h2>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                        <h5>Home</h5>
+                        <h5>Pages</h5>
+                        <h5>Protfolio</h5>
+                        <h5>Blog</h5>
+                        <h5>Contact</h5>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div>
+                        <p>Call US<a href="#" style="color: orangered;">+999 123 456 112</a></p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div>
+                        <button
+                            style="padding: 15px 25px; border-radius: 10px; background-color: rgb(255, 132, 0); border: 0; color: white;">Send
+                            Us Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div>
+                        <p style="color: orangered; font-size: larger;">Top Brands Trust Our Digital Services!</p>
+                        <p style="font-size: xx-large;"><b>Robust Search Engine Marketing Strategies for 100% Results
+                        </p></b>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed<br> eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut quis<br> nostrud ullamco laboris nisi.</p>
+                        <div style="display: flex; gap:7%;">
+                            <button
+                                style="color: white; background-color: orangered; padding: 8px 50px; border: 0; border-radius: 5px;"><b>Start
+                                    Now</b></button>
+                            <p
+                                style="color: rgb(255, 132, 0); text-decoration: none; padding-left: 10px; padding-top: 5px; font-size: larger;">
+                                <b>Learn More
+                            </p>
+                            </b>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div style="padding-left: 20%;">
+                        <img src="https://mobirise.com/extensions/cyberm5/digital-marketing/assets/images/undraw-all-the-data-re-hh4w-1.svg"
+                            width="600px" height="600px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding-top: 5%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div>
+                        <p style="color: rgb(255, 132, 0); font-size: larger;">Our Services</p>
+                        <h1 style="font-size: 60px;">Services we offer</h1>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div>
+                        <p style="font-size: larger;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding-top: 5%; padding-left: 15%;">
+        <div class="container">
+            <div style="display: flex;">
+                <div class="open_class"
+                    style="width: 25%;box-shadow: 0 0.15rem 1rem rgba(0, 0, 0, 0.15); padding: 15px; margin: 10px;">
+                    <span style="color: orangered;"><i class="fa-brands fa-space-awesome fa-2xl"></i></span>
+                    <p style="font-size: larger;padding-top: 25px;"><b>SEO Consultancy</b></p>
+                    <p>
+                        Sed ut perspiciatis unde omnis<br> iste natus error sit voluptatem<br> accusantium
+                        dolorem<br>
+                        laudantium, totam rem<br> aperiam, eaque ipsa
+                    </p>
+                </div>
+                <div class="open_class"
+                    style="width: 25%;box-shadow: 0 0.15rem 1rem rgba(0, 0, 0, 0.15);padding: 15px; margin: 10px;">
+                    <span><span style="color: orangered;"><i class="fa-solid fa-file-pen fa-2xl"></i></span>
+                        <p style="font-size: larger;padding-top: 25px;"><b>SEO Consultancy</b></p>
+                        <p>
+                            Sed ut perspiciatis unde omnis<br> iste natus error sit voluptatem<br> accusantium
+                            dolorem<br>
+                            laudantium, totam rem<br> aperiam, eaque ipsa
+                        </p>
+                </div>
+                <div class="open_class"
+                    style="width: 25%;box-shadow: 0 0.15rem 1rem rgba(0, 0, 0, 0.15);padding: 15px; margin: 10px;">
+                    <span><span style="color: orangered;"><span style="color: orangered;"><i
+                                    class="fa-solid fa-key fa-2xl"></i></span></span>
+                        <p style="font-size: larger;padding-top: 25px;"><b>SEO Consultancy</b></p>
+                        <p>
+                            Sed ut perspiciatis unde omnis<br> iste natus error sit voluptatem<br> accusantium
+                            dolorem<br>
+                            laudantium, totam rem<br> aperiam, eaque ipsa
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding: 5%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div>
+                        <p style="color: rgb(255, 132, 0); font-size: 25px;">Maximize your business growth</p>
+                        <h2 style="font-size: 70px;">Crafting out a<br> niche for your<br> online business</h2>
+                        <p style="font-size: larger; padding-top: 20px;">Sed ut perspiciatis unde omnis iste natus error
+                            sit<br> voluptatem accusantium doloremque
+                            laudantium,<br> totam rem aperiam, eaque ipsa quae ab illo inventore<br> veritatis et quasi
+                            architecto beatae vitae dicta sunt<br> explicabo. Nemo enim ipsam voluptatem<br> quia
+                            voluptas sit
+                            aspernatur aut odit aut fugit, sed quia<br> magni dolores eos qui ratione
+                            voluptatem.</p>
+                        <div style="display: flex; gap:7%; padding-top: 5%;">
+                            <button
+                                style="color: white; background-color: orangered; padding: 8px 50px; border: 0; border-radius: 5px;"><b>Start
+                                    Now</b></button>
+                            <p
+                                style="color: rgb(255, 132, 0); text-decoration: none; padding-left: 10px; padding-top: 5px; font-size: larger;">
+                                <b>Learn More
+                            </p>
+                            </b>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div>
+                        <img src="https://mobirise.com/extensions/cyberm5/digital-marketing/assets/images/undraw-marketing-re-7f1g.svg"
+                            height="700px" width="700px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: rgba(255, 68, 0, 0.851); padding: 5%;">
+        <div class="container">
+            <div style="text-align: center;">
+                <h1 style="font-size: 70px; color: white;">How we can help?</h1>
+            </div>
+            <div style="display: flex; gap: 10%;">
+                <div>
+                    <span style="color: red;"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></span>
+                    <p style="color: white; font-size: 20px; padding-top: 20px;"><b>Search Engine Optimization</b></p>
+                    <p style="color: white; font-size: larger;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing
+                        elit,
+                        sed do eiusmod tempor<br> incididunt ut
+                        labore et dolore.</p>
+                </div>
+                <div>
+                    <span style="color: red;"><i class="fa-regular fa-star fa-2xl"></i></span>
+                    <p style="color: white; font-size: 20px; padding-top: 20px;"><b>Social Media Strategy</b></p>
+                    <p style="color: white; font-size: larger;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing
+                        elit,
+                        sed do eiusmod tempor<br> incididunt ut
+                        labore et dolore.</p>
+                </div>
+                <div>
+                    <span style="color: red;"><i class="fa-solid fa-grip-lines-vertical fa-2xl"></i></span>
+                    <p style="color: white; font-size: 20px; padding-top: 20px;"><b>Real Time and Data</b></p>
+                    <p style="color: white; font-size: larger;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing
+                        elit,
+                        sed do eiusmod tempor<br> incididunt ut
+                        labore et dolore.</p>
+                </div>
+            </div>
+            <div style="display: flex; gap: 10%; padding-top: 10%;">
+                <div>
+                    <span style="color: red;"><i class="fa-solid fa-rocket fa-2xl"></i></span>
+                    <p style="color: white; font-size: 20px; padding-top: 20px;"><b>Online Media Management</b></p>
+                    <p style="color: white; font-size: larger;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing
+                        elit,
+                        sed do eiusmod tempor<br> incididunt ut
+                        labore et dolore.</p>
+                </div>
+                <div>
+                    <span style="color: red;"><i class="fa-regular fa-envelope-open fa-2xl"></i></span>
+                    <p style="color: white; font-size: 20px; padding-top: 20px;"><b>Reporting & Analysis</b></p>
+                    <p style="color: white; font-size: larger;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing
+                        elit,
+                        sed do eiusmod tempor<br> incididunt ut
+                        labore et dolore.</p>
+                </div>
+                <div>
+                    <span style="color: red;"><i class="fa-solid fa-arrow-rotate-left fa-2xl"></i></span>
+                    <p style="color: white; font-size: 20px; padding-top: 20px;"><b>Penalty Recovery</b></p>
+                    <p style="color: white; font-size: larger;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing
+                        elit,
+                        sed do eiusmod tempor<br> incididunt ut
+                        labore et dolore.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div>
+                        <img src="https://mobirise.com/extensions/cyberm5/digital-marketing/assets/images/undraw-investment-data-re-sh9x.svg"
+                            width="700px" height="700px" />
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <p style="color: orangered; font-size: 25px; padding-top: 15%;">SEO Solutions With A
+                            Difference</p>
+                        <p style="font-size: 50px;"><b>Track and<br> Analyze Your<br> Business<br> Statistics</b></p>
+                        <p style="font-size: 23px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod</p>
+                    </div>
+                    <div style="display: flex; gap:7%; padding-top: 5%;">
+                        <button
+                            style="color: white; background-color: orangered; padding: 8px 50px; border: 0; border-radius: 5px;"><b>Start
+                                Now</b></button>
+                        <p
+                            style="color: rgb(255, 132, 0); text-decoration: none; padding-left: 10px; padding-top: 5px; font-size: larger;">
+                            <b>Learn More
+                        </p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="head_class"
+            style="display: flex; justify-content: center; align-items: center; gap: 15%; border-radius: 10px; background-color: rgba(255, 68, 0, 0.851); color: white; padding-top: 20px;">
+            <div>
+                <p style="font-size: 70px;"><b>3878</p></b>
+                <p style="font-size: larger;">Satisfied Customer</p>
+            </div>
+            <div>
+                <p style="font-size: 70px;"><b>2045</p></b>
+                <p style="font-size: larger;"><b> Project</p></b>
+            </div>
+            <div>
+                <p style="font-size: 70px;"><b>25</p></b>
+                <p style="font-size: larger;"><b>Glorious Year</p></b>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 8%; background-color: rgba(0, 0, 255); padding-bottom: 5%;">
+        <div style="display: flex; justify-content: center; align-items: center;  color: white;">
+            <div style="padding-top: 5%;">
+                <p style="font-size: 70px; ">What our client’s say</p>
+            </div>
+        </div>
+        <div style="background-color: rgb(135, 153, 235); width: 50; margin: 5% 25%; padding: 5%;">
+            <span style="color: white;display: flex;justify-content: center;padding-top: 5%; padding-bottom: 5%;"><i
+                    class="fa-solid fa-quote-left fa-2xl"></i></span>
+            <div>
+                <p
+                    style="color: white;  display: flex; justify-content: center; align-items: center; text-align: center; font-size: 30px;">
+                    Duis aute irure dolor
+                    in reprehenderit in voluptate<br> velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur
+                    sint
+                    occaecat
+                    cupidatat non proident,<br> sunt in culpa qui officia deserunt mollit anim.<br>Adrian Smith
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div>
+                        <p style="color: orangered; font-size: 25px; padding-top: 10%;">Why Choose us</p>
+                        <p style="font-size: 35px;"><b>An array of online Marketing<br> Services</b></p>
+                    </div>
+                    <div>
+                        <div style=" box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); width: 75%; padding: 10px;">
+                            <div style="display: flex;">
+                                <div>
+                                    <button class="head_class"
+                                        style="font-size: 30px;border: 1px solid grey;  border-radius: 100px;padding: 5px 20px;color: rgb(231, 93, 42);">
+                                        1</button>
+                                </div>
+                                <p style="font-size: larger; padding-left: 25px;"><b>Rapid interaction with clients</b>
+                                </p>
+                            </div>
+                            <div>
+                                <p style="padding-left: 12%;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing
+                                    elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            style=" box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); width: 75%; padding: 10px; margin-top: 15px;">
+                            <div style="display: flex;">
+                                <div>
+                                    <button class="head_class"
+                                        style="font-size: 30px;border: 1px solid grey;  border-radius: 100px;padding: 5px 20px;color: rgb(231, 93, 42);">
+                                        2</button>
+                                </div>
+                                <p style="font-size: larger; padding-left: 25px;"><b>Scientific website optimization</b>
+                                </p>
+                            </div>
+                            <div>
+                                <p style="padding-left: 12%;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing
+                                    elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            style=" box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); width: 75%; padding: 10px; margin-top: 15px;">
+                            <div style="display: flex;">
+                                <div>
+                                    <button class="head_class"
+                                        style="font-size: 30px;border: 1px solid grey;  border-radius: 100px;padding: 5px 20px;color: rgb(231, 93, 42);">
+                                        3</button>
+                                </div>
+                                <p style="font-size: larger; padding-left: 25px;"><b>Generating increased revenue</b>
+                                </p>
+                            </div>
+                            <div>
+                                <p style="padding-left: 12%;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing
+                                    elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img style="padding-top: 15%;"
+                        src="https://mobirise.com/extensions/cyberm5/digital-marketing/assets/images/undraw-pie-graph-re-fvol.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; text-align: center; margin-top: 8%;">
+        <div>
+            <p style="color: orangered; font-size: 25px;">Best SEO Plan & Package</p>
+            <p style="font-size: 70px;"><b>Our Pricing Plans.</b></p>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div
+            style="display: flex; flex-direction: column; margin-left: 14%; justify-content: center; align-items: center;  padding: 20px 10px; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); width: 25%; text-align: center; margin-top: 3%;">
+            <div>
+                <p style="color: gray; font-size: larger;">Standard</p>
+            </div>
+            <div>
+                <p style="font-size: 70px;"><sup>$</sup>0</p>
+            </div>
+            <div>
+                <p style="font-size: larger;">1 Domain</p>
+            </div>
+            <div>
+                <p style="font-size: larger;">1 Year Premium Support</p>
+            </div>
+            <div>
+                <p style="font-size: larger;">Team fundraising</p>
+            </div>
+            <button
+                style="padding: 15px 80px; border-radius: 30px; margin-top: 25px; background-color: orangered; color: white; border: 0;">Choss
+                Plan</button>
+        </div>
+        <div
+            style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 10px; background-color: orange; color: white; padding: 20px 10px; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); width: 25%; text-align: center; margin-top: 3%;">
+            <div>
+                <p style="color: gray; font-size: larger;">Standard</p>
+            </div>
+            <div>
+                <p style="font-size: 70px;"><sup>$</sup>39.<sup>99</sup></p>
+            </div>
+            <div>
+                <p style="font-size: larger;">1 Domain</p>
+            </div>
+            <div>
+                <p style="font-size: larger;">1 Year Premium Support</p>
+            </div>
+            <div>
+                <p style="font-size: larger;">Team fundraising</p>
+            </div>
+            <button
+                style="padding: 15px 80px; border-radius: 30px; margin-top: 25px; background-color: red; color: white; border: 0;">Choss
+                Plan</button>
+        </div>
+        <div
+            style="display: flex; flex-direction: column; justify-content: center; align-items: center;margin: 10px; padding: 20px 10px; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); width: 25%; text-align: center; margin-top: 3%;">
+            <div>
+                <p style="color: gray; font-size: larger;">Standard</p>
+            </div>
+            <div>
+                <p style="font-size: 70px;"><sup>$</sup>27.<sup>99</sup></p>
+            </div>
+            <div>
+                <p style="font-size: larger;">1 Domain</p>
+            </div>
+            <div>
+                <p style="font-size: larger;">1 Year Premium Support</p>
+            </div>
+            <div>
+                <p style="font-size: larger;">Team fundraising</p>
+            </div>
+            <button
+                style="padding: 15px 80px; border-radius: 30px; margin-top: 25px; background-color: orangered; color: white; border: 0;">Choss
+                Plan</button>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; text-align: center;">
+        <p style="font-size: larger; color: rgba(128, 128, 128, 0.999); padding-top: 5%;">Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa<br> qui officia deserunt mollit.</p>
+    </div>
+    <div
+        style="display: flex; justify-content: center; align-items: center; color: white; background-color: black; padding: 20px; font-size: 30px; margin-top: 20px;">
+        <p>© Copyright 2025 Mobirise - All Rights Reserved</p>
+    </div>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+
+</html>
