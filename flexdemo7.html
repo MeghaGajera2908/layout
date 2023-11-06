@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>demoform</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 18px;
+            padding: 20px;
+        }
+
+        h1 {
+            padding-bottom: 15px;
+        }
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        table {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            width: 50%;
+            padding: 10px;
+        }
+        td {
+            border-bottom: 1px solid black;
+            padding: 10px;
+        }
+        .textonly {
+            padding: 10px;
+            border: 0;
+            border-bottom: 1px solid gray;
+            width: 100%;
+        }
+        form>div {
+            padding-bottom: 20px;
+        }
+        form {
+            width: 50%;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Learning Path</h1>
+        <div class="flex">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Informal</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                    </tr>
+                    <tr>
+                        <td>Repetable</td>
+                        <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum.</td>
+                    </tr>
+                    <tr>
+                        <td>Defined</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, fugiat.</td>
+                    </tr>
+                    <tr>
+                        <td>Meansurable</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perferendis pariatur.</td>
+                    </tr>
+                    <tr>
+                        <td>Optimising</td>
+                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit vel sequi facilis.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form action="" target="" method="">
+                <h3 style="background-color: gray; padding: 5px;">Required more Information</h3>
+                <div>
+                    <input class="textonly" type="text" id="name" value="" placeholder="Name*" required />
+                </div>
+                <div>
+                    <input class="textonly" type="email" id="email" value="" placeholder="email*" required />
+                </div>
+                <div>
+                    <input class="textonly" type="number" id="number" value="" placeholder="Number*" required /> 
+                </div>
+                <div>
+                    <span>Inquriy for : </span>
+                    <label for="myself">my self</label>
+                    <input type="radio" id="myself" name="Inquriy" value="" />
+                    <label for="computer">my computer</label>
+                    <input type="radio" id="computer" name="Inquriy" value="" />
+                </div>
+                <label for="experience">Totle work experience</label>
+                
+                <select style="margin: 15px;" id="experience">
+                    <option value="noexperince">No experinve</option>
+                    <option value="1year">1 year</option>
+                    <option value="2year">2 year</option>
+                </select>
+                <div class="border-y">
+                    <input type="checkbox" id="policy"/>
+                    <label>By providing your contact details,you agree to our policy</label><br><br>
+                </div>
+                <input type="submit" id="submit" class="submit" value="submit" style="width: 100%; padding: 10px; color: blue;" />
+
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
